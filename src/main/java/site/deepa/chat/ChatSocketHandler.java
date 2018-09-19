@@ -16,7 +16,6 @@ public class ChatSocketHandler implements WebSocketHandler{
     private UnicastProcessor<String> eventPublisher = UnicastProcessor.create();
 
     private Flux<String> outputEvents;
-    private final int capacity = 2;
 
     public ChatSocketHandler() {
         this.outputEvents = eventPublisher.publish().autoConnect();
